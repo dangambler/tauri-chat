@@ -54,16 +54,19 @@ const MainPage: React.FC = () => {
       {loading && <p>Loading..</p>}
       {error && <p style={{ color: "red" }}>Err: {error.message}</p>}
       {messages && messages.length > 0
-        ? messages.reverse().map((msg) => (
-            <p>
-              {msg.name}: {msg.message + " "}
-              {msg.time && (
-                <span style={{ backgroundColor: "black", color: "white" }}>
-                  ({msg.time.toDate().toUTCString()})
-                </span>
-              )}
-            </p>
-          ))
+        ? messages
+            .slice()
+            .reverse()
+            .map((msg) => (
+              <p>
+                {msg.name}: {msg.message + " "}
+                {msg.time && (
+                  <span style={{ backgroundColor: "black", color: "white" }}>
+                    ({msg.time.toDate().toUTCString()})
+                  </span>
+                )}
+              </p>
+            ))
         : null}
     </div>
   );
