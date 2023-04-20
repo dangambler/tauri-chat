@@ -1,9 +1,10 @@
 import React from "react";
+import MainPage from "./screens/MainPage";
 
 function App() {
   return (
     <div>
-      <p>this is actually an app wow</p>
+      <MainPage />
     </div>
   );
 }
