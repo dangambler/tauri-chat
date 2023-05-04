@@ -6,7 +6,7 @@ trying out integrating tauri into a react app
 
 - change firebase config to yours @ `src/config/firebase.ts`
 
-- create a firestore in firebase console, add collection "messages" with documents { name: string, message: string, time: timestamp }
+- create a firestore in firebase console, enable access to read/write data
 
 - change app id to something yours (`src-tauri/tauri.conf.json` -> `tauri/bundle/identifier`)
 
